@@ -26,9 +26,9 @@
     border-radius: 4px;
 }
 .button:hover {
-    background-color: rgb(198, 217, 253);
+    background-color: rgb(218, 218, 218);
 }
 
 .button:active {
-    background-color: rgb(124, 170, 255);
+    border: 2px solid rgb(133, 20, 0);
 }

@@ -3,7 +3,6 @@ import { nanoid } from 'nanoid';
 import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
-// import { contactForm, title, contactsWrapper } from 'components/Phonebook/Phonebook.module.css'
 import css from 'components/Phonebook/Phonebook.module.css'
 
 export default class Phonebook extends Component {
@@ -76,17 +75,19 @@ export default class Phonebook extends Component {
         const { getFilteredContacts, state, handleChange, addContact, removeContact } = this;
         const contacts = getFilteredContacts();
 
-        return (<>
-            <div className={css.contactForm}>
-                <h1 className={css.title}>Phonebook</h1>
-                <ContactForm onSubmit={addContact} />
-            </div>
-            <div className={css.contactsWrapper}>
-                <h2 className={css.title}>Contacts</h2>
-                <Filter onChange={handleChange} value={state.filter}/>
-                
-                <ContactList items={contacts} removeContact={removeContact} />
-            </div>
-        </>)
+        return (
+            <>
+                <div className={css.contactForm}>
+                    <h1 className={css.title}>Phonebook</h1>
+                    <ContactForm onSubmit={addContact} />
+                </div>
+                <div className={css.contactsWrapper}>
+                    <h2 className={css.title}>Contacts</h2>
+                    <Filter onChange={handleChange} value={state.filter}/>
+                    
+                    <ContactList items={contacts} removeContact={removeContact} />
+                </div>
+            </>
+        )
     }
 }
