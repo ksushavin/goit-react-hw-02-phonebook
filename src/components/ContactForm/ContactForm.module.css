@@ -1,0 +1,22 @@
+
+.form {
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+input:focus {
+    border-color: rgb(154, 154, 255);
+}
+.button{
+    display: block;
+    padding: 5px 10px;
+    border: 1px solid rgb(117, 117, 117);
+    border-radius: 4px;
+    color: rgb(88, 88, 88);
+}
+.button:hover {
+    background-color: rgb(198, 217, 253);
+}
+.button:active {
+    background-color: rgb(124, 170, 255);
+}
